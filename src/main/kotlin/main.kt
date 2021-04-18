@@ -70,4 +70,28 @@ fun main(args: Array<String>) {
     for (n in 30..15) {
         println(n)
     }
+
+    // Iterate over collections
+    // Exiting early
+    val dayOfWeek = listOf(
+        "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanch"
+    )
+    for (day in dayOfWeek) {
+        if (day == "Mercredi")  {
+            continue
+        }
+        if (day == "Samedi") {
+            println ("Prepare for week-end")
+            break
+        }
+        println(day)
+    }
+
+    val matrix = MutableList(5) { MutableList(5) {"*"} }
+    for (row in 0..matrix.lastIndex) {
+        for (col in 0..matrix.lastIndex) {
+            matrix[row][col] = "$row:$col"
+        }
+    }
+    println(matrix)
 }
