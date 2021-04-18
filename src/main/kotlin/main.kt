@@ -99,10 +99,33 @@ fun main(args: Array<String>) {
     row@ for (row in 0..5) {
         column@ for (col in 0..5) {
             if (col == 2 && row == 2) {
-                break@column
+                break@column // or @row
             }
             print ("x\t")
         }
         println()
+    }
+
+    // Challenge 2
+    val matrixRow = 10
+    val matrixCol = 10
+    val gameMatrix = Array(matrixRow) { Array(matrixCol) {"."} }
+
+    gameMatrix[1][2] = "X"
+    for (row in 0..matrixRow-1) {
+        for (col in 0..matrixCol-1) {
+            print("${gameMatrix[row][col]}")
+        }
+        println()
+    }
+
+   mainloop@ for (row in 0 until matrixRow) {
+        println ("Sarching in row $row")
+        for (col in 0 until matrixCol) {
+            if (gameMatrix[row][col] == "X") {
+                println("Find X at row: $row, col: $col")
+                break@mainloop
+            }
+        }
     }
 }
