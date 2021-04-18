@@ -94,4 +94,15 @@ fun main(args: Array<String>) {
         }
     }
     println(matrix)
+
+    // Label
+    row@ for (row in 0..5) {
+        column@ for (col in 0..5) {
+            if (col == 2 && row == 2) {
+                break@column
+            }
+            print ("x\t")
+        }
+        println()
+    }
 }
