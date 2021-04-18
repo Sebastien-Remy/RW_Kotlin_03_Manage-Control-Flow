@@ -189,5 +189,16 @@ fun main(args: Array<String>) {
         pword.length < 10 -> println ("Password not strong")
         else -> print("Great all is ok")
     }
-    
+
+    // Challenge
+    val year = 1971
+    println()
+    println("Challenge")
+    println(year)
+    val century = when (year) {
+        in 2000..2020 -> "2nd millenium"
+        in 0..1999 -> "1st millenium"
+        else -> "unused case"
+    }
+    println (century)
 }
