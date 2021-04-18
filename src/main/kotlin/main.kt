@@ -53,4 +53,21 @@ fun main(args: Array<String>) {
         print("$country ")
     }
 
+    // For loop challenge
+    val r1 = 10..20
+
+    // Print 10 to 20 number
+    for (n in r1) {
+        println(n)
+    }
+
+    // Print 20 number step 3
+    for (n in r1 step 3) {
+        println(n)
+    }
+
+    // Print 15 to 0
+    for (n in 30..15) {
+        println(n)
+    }
 }
