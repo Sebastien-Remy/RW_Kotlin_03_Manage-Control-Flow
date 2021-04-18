@@ -128,4 +128,66 @@ fun main(args: Array<String>) {
             }
         }
     }
+
+    // Wehn
+    var myAge = 50
+    when (myAge) {
+        25 -> println("Quater century")
+        50 -> println("Half century")
+        else -> {
+            println ("Nothing to say")
+        }
+    }
+
+    myAge = 14
+
+    when (myAge) {
+        in 0..12 -> println("Child")
+        in 13..19 -> println("Teenager")
+        in 20..60 -> println("Adult")
+        else -> {
+            println ("Old man")
+        }
+    }
+
+    val message = when (myAge) {
+        in 0..12 -> "Child"
+        in 13..19 -> "Teenager"
+        in 20..60 -> "Adult"
+        else -> {
+             "Old man"
+        }
+    }
+    println(message)
+
+    val email: String? = "mail@mail?com"
+    val pword: String? = "iloveyouto"
+
+    when {
+        email == null || email.isEmpty() -> {
+            println("You need an email")
+        }
+        "@" !in email -> {
+            println("invalid email")
+        }
+        pword == null || pword.isEmpty() -> {
+            println("You need a password")
+        }
+        pword.length < 10 -> {
+            println("Password not strong")
+        }
+        else -> {
+            print("Great all is ok")
+        }
+    }
+
+    // Short version
+    when {
+        email == null || email.isEmpty() -> println("You need an email")
+        "@" !in email ->  println("invalid email")
+        pword == null || pword.isEmpty() -> println("You need a password")
+        pword.length < 10 -> println ("Password not strong")
+        else -> print("Great all is ok")
+    }
+    
 }
