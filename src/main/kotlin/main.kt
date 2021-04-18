@@ -19,5 +19,11 @@ fun main(args: Array<String>) {
         i +=1
     } while (i < visitedCountries.size)
 
+    // Challenge
+    i = visitedCountries.lastIndex
+    while (i > 0) {
+        println ("Contry at index $i: ${visitedCountries[i]}")
+        i -=1
+    }
 
 }
